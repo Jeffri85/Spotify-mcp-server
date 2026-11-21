@@ -59,7 +59,7 @@ export const Kembar: React.FC = () => {
   const rio = frame >= 180 && frame < 300 || frame >= 390;
   return (
     <AbsoluteFill style={{background: 'linear-gradient(#7ec8f5,#d9f2ff)'}}>
-      <Audio src={staticFile('musik.wav')} volume={0.6} />
+      <Audio src={staticFile('musik.wav')} volume={0.3} />
       <svg width={1080} height={1920} viewBox="0 0 1080 1920">
         <circle cx={200} cy={sunY} r={90} fill="#ffd54a" />
         <g transform={`translate(${cloud},180)`} fill="#fff"><ellipse cx={0} cy={0} rx={110} ry={50} /><ellipse cx={70} cy={-25} rx={70} ry={45} /></g>
@@ -79,11 +79,11 @@ export const Kembar: React.FC = () => {
           <Kid x={520} y={1350} cap="#2d9a4b" shirt="#4895ef" flip talk={!!rio} />
         </g>
       </svg>
-      <Sequence from={0} durationInFrames={90}><Title /></Sequence>
-      <Sequence from={90} durationInFrames={90}><Subtitle text="Rara: Rio, lihat! Layang-layangnya tinggi sekali!" /></Sequence>
-      <Sequence from={180} durationInFrames={120}><Subtitle text="Rio: Ayo kita main sampai sore, Rara!" /></Sequence>
-      <Sequence from={300} durationInFrames={90}><Subtitle text="Rara: Tapi jangan lupa pulang makan ya!" /></Sequence>
-      <Sequence from={390} durationInFrames={60}><Subtitle text="Rio: Siap! Hari yang seru! 🪁" /></Sequence>
+      <Sequence from={0} durationInFrames={90}><Audio src={staticFile('narasi/0.wav')} volume={1} /><Title /></Sequence>
+      <Sequence from={90} durationInFrames={90}><Audio src={staticFile('narasi/1.wav')} volume={1} /><Subtitle text="Rara: Rio, lihat! Layang-layangnya tinggi sekali!" /></Sequence>
+      <Sequence from={180} durationInFrames={120}><Audio src={staticFile('narasi/2.wav')} volume={1} /><Subtitle text="Rio: Ayo kita main sampai sore, Rara!" /></Sequence>
+      <Sequence from={300} durationInFrames={90}><Audio src={staticFile('narasi/3.wav')} volume={1} /><Subtitle text="Rara: Tapi jangan lupa pulang makan ya!" /></Sequence>
+      <Sequence from={390} durationInFrames={60}><Audio src={staticFile('narasi/4.wav')} volume={1} /><Subtitle text="Rio: Siap! Hari yang seru! 🪁" /></Sequence>
     </AbsoluteFill>
   );
 };
