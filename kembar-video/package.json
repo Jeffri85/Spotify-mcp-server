@@ -1,0 +1,1 @@
+{"name":"kembar-video","private":true,"scripts":{"render":"remotion render src/index.ts Kembar out/kembar.mp4 --browser-executable=/opt/pw-browsers/chromium"},"dependencies":{"remotion":"4.0.250","@remotion/cli":"4.0.250","react":"19.0.0","react-dom":"19.0.0"},"devDependencies":{"@types/react":"19.0.0","typescript":"5.7.2"}}
