@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Sequence} from 'remotion';
+import {Audio, staticFile, AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig, Sequence} from 'remotion';
 
 // Karakter orisinal: Rara (topi merah) dan Rio (ikat kepala hijau)
 const Kid: React.FC<{x: number; y: number; cap: string; shirt: string; flip?: boolean; talk?: boolean}> = ({x, y, cap, shirt, flip, talk}) => {
@@ -59,6 +59,7 @@ export const Kembar: React.FC = () => {
   const rio = frame >= 180 && frame < 300 || frame >= 390;
   return (
     <AbsoluteFill style={{background: 'linear-gradient(#7ec8f5,#d9f2ff)'}}>
+      <Audio src={staticFile('musik.wav')} volume={0.6} />
       <svg width={1080} height={1920} viewBox="0 0 1080 1920">
         <circle cx={200} cy={sunY} r={90} fill="#ffd54a" />
         <g transform={`translate(${cloud},180)`} fill="#fff"><ellipse cx={0} cy={0} rx={110} ry={50} /><ellipse cx={70} cy={-25} rx={70} ry={45} /></g>
